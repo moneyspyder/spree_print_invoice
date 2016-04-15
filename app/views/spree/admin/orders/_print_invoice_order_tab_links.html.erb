@@ -4,7 +4,7 @@
     <% buttons.each do |button| %>
       <% title = Spree.t(:"#{button}", scope: [:print_invoice, :buttons], default: 'PDF Slip') %>
       <li>
-        <%= link_to_with_icon 'file', title, spree.admin_order_path(@order, :pdf, template: button), title: title, target: :blank %>
+        <%= link_to_with_icon 'file', title, spree.admin_order_path(@order, :pdf, template: button), title: title, target: :_blank %>
       </li>
     <% end %>
   <% end %>
